@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    position: relative;
+    background-color: #E0E0E0;
+    font-family: cursive;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover ;
+}
+
+button:active{
+    background-color: #a64ac9;
+}

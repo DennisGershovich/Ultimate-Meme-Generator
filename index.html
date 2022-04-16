@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Meme-Generator</title>
+</head>
+<body onload="init()">
+    <header class="main-header flex">
+        <h1 class="logo">Meme Generator</h1>
+        <nav class="main-nav-bar ">
+        <button onclick="onToggleMenu()" class="navbar-toggler">
+            =
+        </button>
+            <ul class="nav-bar flex clean-list">
+                <li><a class="nav-item" href="#" onclick="init()"> Gallery</a> </li>
+                <li> <a class="nav-item" href="saved.memes.html" target="_blank" onclick="onSavedMemes()"> Memes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <button class=" exit-editor-btn" onclick="onEditMeme()">X</button>
+    <main class="main-content main-layout ">
+        <div class="filter-box flex ">
+        <div class="filter-box-input"> 
+       
+            <label class="filter-box-label">Filter images: </label>
+            <input list="images" class="imagesInput filter-box-input">
+            <datalist id="images" class="filter-box-datalist">
+                <option value="funny" />
+                <option value="animal" />
+                <option value="men" />
+                <option value="baby" />
+            </datalist>
+            <button onclick="onFilterImages()" class="btn filter-btn">
+                Filter
+            </button>
+        </div>
+         <!-- <div class="filter-category flex">
+                <div class="filter-category-item">funny</div>
+                <div class="filter-category-item">animal</div>
+                <div class="filter-category-item">men</div>
+                <div class="filter-category-item">woman</div>
+            </div> -->
+        </div>
+        <div class="cards-grid">     
+        </div>
+    </main>
+    <div class="meme-editor">
+    </div>
+    <div class="share-modal">
+    </div>
+
+<script src="js/meme.controller.js"></script>
+<script src="js/meme.service.js"></script>
+<script src="js/upload.service.js"></script>
+<script src="js/storage.services.js"></script>
+
+</body>
+</html>
